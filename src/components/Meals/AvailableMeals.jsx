@@ -5,14 +5,14 @@ import Mealitem from "./MealItem/Mealitem";
 const DUMMY_MEALS = [
   {
     id: "m1",
-    name: "Sushi",
-    description: "Finest fish and veggies",
+    name: "fried chicken",
+    description: "delicious food in the Day ",
     price: 22.99,
   },
   {
     id: "m2",
-    name: "Schnitzel",
-    description: "A german specialty!",
+    name: "shawarma",
+    description: "A shawarma is Syrian Food Specialty!",
     price: 16.5,
   },
   {
@@ -29,7 +29,15 @@ const DUMMY_MEALS = [
   },
 ];
 const AvailableMeals = () => {
-  const mealList = DUMMY_MEALS.map((meal) => <Mealitem key={meal.id} name ={meal.name} description ={meal.description} price= {meal.price}/>);
+  const mealList = DUMMY_MEALS.map((meal) => (
+    <Mealitem
+      key={meal.id}
+      id ={meal.id}
+      name={meal.name}
+      description={meal.description}
+      price={meal.price}
+    />
+  ));
   return (
     <>
       <section className={classes.meals}>
